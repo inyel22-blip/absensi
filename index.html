@@ -314,15 +314,15 @@ ${teks}`);
   }).then(r => r.text()).then(d => { cetakResponsTeks(`[REKAP]`, d); });
  }
 
- function ambilDataTPP() {
+function ambilDataTPP() {
   const uid = document.getElementById("userId").value;
   const h = new Date();
   fetch(`https://api-absen.baritotimurkab.go.id/public/api/user/get_tpp/${uid}/${h.getMonth()+1}/${h.getFullYear()}`, {
    method: 'GET', headers: dapatkanHeader()
   }).then(r => r.text()).then(d => { cetakResponsTeks(`[TPP]`, d); });
  }
- </script>
- <script>
+</script>
+<script>
   window.ipPublikGlobal = "Mengambil IP...";
 
   function setIPKonsol(ipBaru) {
